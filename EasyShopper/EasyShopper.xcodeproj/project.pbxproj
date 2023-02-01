@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		029AE69A298B10DA0021D1A4 /* SwiftUIEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE699298B10DA0021D1A4 /* SwiftUIEntryView.swift */; };
 		029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A3298B14360021D1A4 /* NetworkService.swift */; };
+		029AE6A6298B15B20021D1A4 /* EasyShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */; };
+		029AE6A8298B16470021D1A4 /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A7298B16470021D1A4 /* JSONService.swift */; };
+		029AE6AA298B203A0021D1A4 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A9298B203A0021D1A4 /* ProductService.swift */; };
 		317447952492AE7000862E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447942492AE7000862E28 /* AppDelegate.swift */; };
 		317447972492AE7000862E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447962492AE7000862E28 /* SceneDelegate.swift */; };
 		317447992492AE7000862E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447982492AE7000862E28 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		029AE699298B10DA0021D1A4 /* SwiftUIEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEntryView.swift; sourceTree = "<group>"; };
 		029AE6A3298B14360021D1A4 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyShopperApp.swift; sourceTree = "<group>"; };
+		029AE6A7298B16470021D1A4 /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
+		029AE6A9298B203A0021D1A4 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		317447912492AE7000862E28 /* EasyShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317447942492AE7000862E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317447962492AE7000862E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				029AE6A3298B14360021D1A4 /* NetworkService.swift */,
+				029AE6A7298B16470021D1A4 /* JSONService.swift */,
+				029AE6A9298B203A0021D1A4 /* ProductService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		317447A82492AE8E00862E28 /* DemoData */ = {
 			isa = PBXGroup;
 			children = (
+				029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */,
 				317447A92492AEAA00862E28 /* NetworkServiceMock.swift */,
 				317447AB2492AEE500862E28 /* DemoData.swift */,
 			);
@@ -136,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = "Ka-ching";
 				TargetAttributes = {
 					317447902492AE7000862E28 = {
@@ -185,9 +194,12 @@
 				317447992492AE7000862E28 /* ViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
 				029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */,
+				029AE6AA298B203A0021D1A4 /* ProductService.swift in Sources */,
+				029AE6A6298B15B20021D1A4 /* EasyShopperApp.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
+				029AE6A8298B16470021D1A4 /* JSONService.swift in Sources */,
 				317447AF2492B6DC00862E28 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +252,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,6 +313,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
