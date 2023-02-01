@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		029AE69A298B10DA0021D1A4 /* SwiftUIEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE699298B10DA0021D1A4 /* SwiftUIEntryView.swift */; };
+		029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A3298B14360021D1A4 /* NetworkService.swift */; };
 		317447952492AE7000862E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447942492AE7000862E28 /* AppDelegate.swift */; };
 		317447972492AE7000862E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447962492AE7000862E28 /* SceneDelegate.swift */; };
 		317447992492AE7000862E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447982492AE7000862E28 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		029AE699298B10DA0021D1A4 /* SwiftUIEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEntryView.swift; sourceTree = "<group>"; };
+		029AE6A3298B14360021D1A4 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		317447912492AE7000862E28 /* EasyShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317447942492AE7000862E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317447962492AE7000862E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029AE69B298B11330021D1A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				029AE6A3298B14360021D1A4 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		317447882492AE7000862E28 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		317447932492AE7000862E28 /* EasyShopper */ = {
 			isa = PBXGroup;
 			children = (
+				029AE69B298B11330021D1A4 /* Services */,
 				317447AD2492B6C600862E28 /* Models */,
 				317447A82492AE8E00862E28 /* DemoData */,
 				317447942492AE7000862E28 /* AppDelegate.swift */,
@@ -173,6 +184,7 @@
 				029AE69A298B10DA0021D1A4 /* SwiftUIEntryView.swift in Sources */,
 				317447992492AE7000862E28 /* ViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
+				029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
