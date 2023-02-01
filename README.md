@@ -1,3 +1,7 @@
+**Matt here:** I wanted to try my hand at this THT, even though I am not interviewing for any positions at Ka-ching. Gotta keep practicing. :)
+
+May continue working on it past the two hour mark.
+
 # Ka-ching's Take Home Assignment for the position of Junior iOS Developer
 
 This repository contains a take home assignment that is a part of the interviewing process for the position of Junior iOS Developer at Ka-ching
