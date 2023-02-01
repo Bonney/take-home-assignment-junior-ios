@@ -9,6 +9,17 @@
 import Foundation
 
 struct Product: Decodable {
-    var id: String
-    #warning("Complete this data structure")
+    let barcode: String
+    let description: String?
+    let id: String?
+    let imageURL: String?
+    let name: String?
+    let retailPrice: Int
+    let costPrice: Int?
 }
+
+/// Identifiable conformance comes "for free" because `Products` have `.id`s.
+extension Product: Identifiable {
+}
+
+
