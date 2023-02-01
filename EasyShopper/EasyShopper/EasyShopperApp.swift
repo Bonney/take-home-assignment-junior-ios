@@ -10,9 +10,14 @@ import SwiftUI
 
 @main
 struct EasyShopper_App: App {
+    @StateObject private var shoppingBasket = ShoppingBasket()
+    @StateObject private var productInventory = ProductInventory()
+
     var body: some Scene {
         WindowGroup {
-            SwiftUIEntryView()
+            AppEntryView()
+            .environmentObject(shoppingBasket)
+            .environmentObject(productInventory)
         }
     }
 }

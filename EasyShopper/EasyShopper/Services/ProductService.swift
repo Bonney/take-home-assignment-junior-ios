@@ -11,20 +11,9 @@ import Foundation
 typealias Products = [String: Product]
 
 /// A service responsible for fetching the products from the network.
-@MainActor class ProductService: ObservableObject {
-    /// Use of `private(set)` ensures only this class update this array.
-    @Published public private(set) var products: [Product] = []
+class ProductService {
 
-    /// Error message for the UI.
-    @Published public private(set) var error: Error? = nil
-
-    init() {
-        Task {
-            await loadProducts()
-        }
-    }
-
-    private func loadProducts() async {
+    func loadProducts() async -> Result<[Product], Error> {
         let networkRequestResult = await NetworkService().data(for: ProductService.endpoint)
 
         switch networkRequestResult {
@@ -34,15 +23,13 @@ typealias Products = [String: Product]
 
             switch decodeResult {
             case .success(let products):
-                self.products = products
+                return .success(products)
             case .failure(let error):
-                print(error)
-                self.error = error
+                return .failure(error)
             }
 
         case .failure(let error):
-            print(error)
-            self.error = error
+            return .failure(error)
         }
     }
 
@@ -66,29 +53,3 @@ extension ProductService {
     /// Endpoint URL for this practice project.
     static let endpoint = URL(string: "https://run.mocky.io/v3/4e23865c-b464-4259-83a3-061aaee400ba")!
 }
-
-//Task {
-//    let output = await NetworkService().data(for: NetworkService.endpoint)
-//    switch output {
-//    case .success(let success):
-//        //                        print(String(data: success, encoding: .utf8) ?? "")
-//
-//        do {
-//            let converted = try JSONService().decoder.decode(Products.self, from: success)
-//
-//            let mapped = converted.reduce(into: []) {
-//                $0.append($1.value)
-//            }
-//
-//            print(mapped)
-//
-//            products = mapped
-//        } catch {
-//            print("## 01 ##")
-//            print(error)
-//        }
-//    case .failure(let failure):
-//        print("## 02 ##")
-//        print(failure)
-//    }
-//}

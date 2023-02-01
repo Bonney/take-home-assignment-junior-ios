@@ -8,4 +8,13 @@
 
 import Foundation
 
-#warning("Feel free to model a ShoppingBasket any way you like")
+class ShoppingBasket: ObservableObject {
+    @Published var contents: [Product] = []
+
+    var totalPrice: Int {
+        contents.reduce(into: 0) {
+            $0 += $1.retailPrice
+        }
+    }
+
+}
