@@ -19,8 +19,8 @@ struct ProductDetailView: View {
 
                 image()
                     .frame(minHeight: 250)
-//                    .frame(maxWidth: .infinity, alignment: .center)
-//                    .listRowInsets(EdgeInsets())
+                    .cornerRadius(4)
+                    .listRowSeparator(.hidden)
 
                 Text(product.retailPrice, format: .currency(code: "USD"))
                     .font(.title3)
@@ -29,7 +29,7 @@ struct ProductDetailView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .primaryAction) {
                 addToCart()
             }
         }

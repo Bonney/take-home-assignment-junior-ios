@@ -16,4 +16,14 @@ struct ShoppingBasketItem {
         self.product = product
         self.quantity = quantity
     }
+
+    var totalRetailPrice: Int {
+        product.retailPrice * quantity
+    }
+}
+
+extension ShoppingBasketItem: Identifiable {
+    var id: String {
+        return (product.id ?? UUID().uuidString) + "X" + String(describing: quantity)
+    }
 }

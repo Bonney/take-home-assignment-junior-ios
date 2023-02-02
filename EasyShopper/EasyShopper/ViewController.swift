@@ -8,12 +8,6 @@
 
 import UIKit
 
-#warning("""
-The initial viewcontroller should show the shopping basket.
-It should contain a 'Plus' button for adding new items to the basket.
-It should contain a 'Clear' button for removing all items in the basket.
-""")
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

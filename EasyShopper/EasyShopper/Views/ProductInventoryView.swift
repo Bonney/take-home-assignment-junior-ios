@@ -23,6 +23,7 @@ struct ProductInventoryView: View {
             }
         }
         .navigationTitle("Inventory")
+        
     }
 }
 

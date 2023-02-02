@@ -10,48 +10,51 @@ import SwiftUI
 
 struct AppEntryView: View {
     @EnvironmentObject private var shoppingBasket: ShoppingBasket
-    @State private var showProductView: Bool = false
+    @State private var isSheetVisible: Bool = false
+
+    var base: some View {
+        ProductInventoryView()
+            .navigationDestination(for: Product.self) { product in
+                ProductDetailView(product: product)
+                    .toolbar(content: showCartButton)
+            }
+    }
+
+    var sheet: some View {
+        ShoppingBasketView()
+    }
 
     var body: some View {
-        NavigationStack() {
-            ShoppingBasketView()
-                .sheet(isPresented: $showProductView) {
-                    NavigationStack {
-                        ProductInventoryView()
-                            .navigationBarTitleDisplayMode(.inline)
-                            .navigationDestination(for: Product.self) { product in
-                                ProductDetailView(product: product)
-                            }
-                    }
-                    .listStyle(.plain)
-                    .presentationDetents([.medium, .large])
-                }
-                .toolbar {
-                    ToolbarItemGroup(placement: .bottomBar) {
-                        showInventoryButton
-                            .labelStyle(.titleAndIcon)
-                        clearBasketButton
-                            .tint(.red)
-                    }
-                }
+        NavigationStack {
+            base
+                .listStyle(.plain)
+                .toolbar(content: showCartButton)
+        }
+        .sheet(isPresented: $isSheetVisible) {
+            NavigationStack {
+                sheet
+            }
+            .presentationDetents([.medium, .large])
         }
     }
 
-    var showInventoryButton: some View {
-        Button {
-            showProductView.toggle()
-        } label: {
-            Label("Add Items", systemImage: "plus")
+    func showCartButton() -> some ToolbarContent {
+        ToolbarItem(placement: .bottomBar) {
+            Button {
+                isSheetVisible.toggle()
+            } label: {
+                Label(cartButtonLabel, systemImage: "cart.fill")
+                    .labelStyle(.titleAndIcon)
+            }
         }
     }
 
-    var clearBasketButton: some View {
-        Button(role: .destructive) {
-            // shoppingBasket.emptyOfAllItems()
-        } label: {
-            Text("Clear All")
+    var cartButtonLabel: String {
+        var base = "View Cart"
+        if shoppingBasket.contents.count > 0 {
+            base.append(" (\(shoppingBasket.contents.count))")
         }
-        .disabled(shoppingBasket.contents.isEmpty)
+        return base
     }
 }
 
