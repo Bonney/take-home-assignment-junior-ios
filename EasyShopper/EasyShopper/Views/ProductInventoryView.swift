@@ -17,7 +17,9 @@ struct ProductInventoryView: View {
                 Text(error.localizedDescription).foregroundColor(.red)
             }
             ForEach(inventory.products) { product in
-                LabeledContent(product.name ?? "", value: product.retailPrice, format: .currency(code: "USD"))
+                NavigationLink(value: product) {
+                    LabeledContent(product.name ?? "", value: product.retailPrice, format: .currency(code: "USD"))
+                }
             }
         }
         .navigationTitle("Inventory")

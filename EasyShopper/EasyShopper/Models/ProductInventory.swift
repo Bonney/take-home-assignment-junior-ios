@@ -23,6 +23,7 @@ class ProductInventory: ObservableObject {
             case .success(let successfullyLoaded):
                 DispatchQueue.main.async {
                     self.products = successfullyLoaded
+                    print(self.products)
                 }
 
             case .failure(let failure):

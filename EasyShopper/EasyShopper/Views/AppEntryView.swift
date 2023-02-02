@@ -18,7 +18,12 @@ struct AppEntryView: View {
                 .sheet(isPresented: $showProductView) {
                     NavigationStack {
                         ProductInventoryView()
+                            .navigationBarTitleDisplayMode(.inline)
+                            .navigationDestination(for: Product.self) { product in
+                                ProductDetailView(product: product)
+                            }
                     }
+                    .listStyle(.plain)
                     .presentationDetents([.medium, .large])
                 }
                 .toolbar {

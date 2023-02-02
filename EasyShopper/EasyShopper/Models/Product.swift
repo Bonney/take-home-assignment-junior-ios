@@ -12,7 +12,7 @@ struct Product: Decodable {
     let barcode: String
     let description: String?
     let id: String?
-    let imageURL: String?
+    let imageUrl: String?
     let name: String?
     let retailPrice: Int
     let costPrice: Int?

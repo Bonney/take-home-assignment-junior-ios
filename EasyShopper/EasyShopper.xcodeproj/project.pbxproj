@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02948229298B306C00C89223 /* Product+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02948228298B306C00C89223 /* Product+Preview.swift */; };
+		0294822B298B31C500C89223 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294822A298B31C500C89223 /* ProductDetailView.swift */; };
 		029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A3298B14360021D1A4 /* NetworkService.swift */; };
 		029AE6A6298B15B20021D1A4 /* EasyShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */; };
 		029AE6A8298B16470021D1A4 /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AE6A7298B16470021D1A4 /* JSONService.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02948228298B306C00C89223 /* Product+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Preview.swift"; sourceTree = "<group>"; };
+		0294822A298B31C500C89223 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		029AE6A3298B14360021D1A4 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyShopperApp.swift; sourceTree = "<group>"; };
 		029AE6A7298B16470021D1A4 /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02948227298B305C00C89223 /* PreviewData */ = {
+			isa = PBXGroup;
+			children = (
+				02948228298B306C00C89223 /* Product+Preview.swift */,
+			);
+			path = PreviewData;
+			sourceTree = "<group>";
+		};
 		029AE69B298B11330021D1A4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 				029AE6B0298B276A0021D1A4 /* ProductInventoryView.swift */,
 				029AE6AE298B26DB0021D1A4 /* ShoppingBasketView.swift */,
 				029AE6B6298B29F30021D1A4 /* AppEntryView.swift */,
+				0294822A298B31C500C89223 /* ProductDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +111,7 @@
 		317447932492AE7000862E28 /* EasyShopper */ = {
 			isa = PBXGroup;
 			children = (
+				02948227298B305C00C89223 /* PreviewData */,
 				029AE6A5298B15B20021D1A4 /* EasyShopperApp.swift */,
 				317447942492AE7000862E28 /* AppDelegate.swift */,
 				317447962492AE7000862E28 /* SceneDelegate.swift */,
@@ -196,10 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				029AE6B1298B276A0021D1A4 /* ProductInventoryView.swift in Sources */,
+				0294822B298B31C500C89223 /* ProductDetailView.swift in Sources */,
 				317447992492AE7000862E28 /* ViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
 				029AE6A4298B14360021D1A4 /* NetworkService.swift in Sources */,
 				029AE6AA298B203A0021D1A4 /* ProductService.swift in Sources */,
+				02948229298B306C00C89223 /* Product+Preview.swift in Sources */,
 				029AE6B5298B282E0021D1A4 /* ProductInventory.swift in Sources */,
 				029AE6A6298B15B20021D1A4 /* EasyShopperApp.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
